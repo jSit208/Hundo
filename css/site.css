@@ -4,6 +4,10 @@
     --dark-color: #292929;
     --white-color: #dff3e4;
 }
+.logofont {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
 
 body {
     color: var(--dark-color);
