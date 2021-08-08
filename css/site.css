@@ -4,6 +4,15 @@
     --dark-color: #292929;
     --white-color: #dff3e4;
 }
+
+.odd {
+    font-weight: 100;
+}
+
+.even {
+    font-weight: bold;
+}
+
 .logofont {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;

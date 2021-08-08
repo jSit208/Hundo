@@ -32,7 +32,7 @@
     <!-- ==== Nav Section === -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand logofont" href="#"><img src="img/JS_Logo_Small.png" class="d-inline-block align-text-top" height="30"> &nbsp;HUNDO</a>
+            <a class="navbar-brand logofont" href="index.html"><img src="img/JS_Logo_Small.png" class="d-inline-block align-text-top" height="30"> &nbsp;HUNDO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -61,8 +61,41 @@
 
     <!-- === Main Section === -->
     <main class="flex-shrink-0">
-        <div class="container">
-            
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 border-end border-2">
+                    <h1>HUNDO: A Coding Project</h1>
+                    <h4 class="lead">Live life one loop at a time. A javascript coding project using loops. 
+                        Write a program the displays the numbers from 0 to 100. Display the even numbers in <strong>BOLD</strong>.
+                    </h4>
+                    <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                    <p>Enter a starting value and an ending value. Press the button and the values will appear</p>
+                </div>
+                <div class="col col-lg-8">
+                    <div>
+                        <h5>Enter Values</h5>
+                        <form class="row gy-2 gx-3">
+                            <div class="col">
+                                <input id="startValue" type="number" class="form-control" placeholder="Start Value" value=0 aria-label="Start Value">
+                            </div>
+                            <div class="col">
+                                <input id="endValue" type="number" class="form-control" placeholder="End Value" value=100 aria-label="End Value">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button id="btnSubmit" type="button" class="btn btn-primary btn-md">Display the Hundo</button>
+                            </div>
+                        </form>
+                        <h2 class="mt-5 border-bottom border-2">Results</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                                <tbody id="tblResults">
+                                    <!-- Results Go Here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -100,6 +133,11 @@
 
     <!-- External JS -->
     <script src="js/site.js"></script>
+    
+    <!-- Wire-Up Event Handlers -->
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 
 </html>
